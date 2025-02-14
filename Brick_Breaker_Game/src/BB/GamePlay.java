@@ -69,6 +69,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 		g.setFont(new Font("serif", Font.BOLD, 25));
 		g.drawString("" + score, 590, 30);
 		
+		
 		if (totalBricks <= 0) {
 			play = false;
 			ballXdir = 0;
@@ -78,7 +79,8 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 			g.drawString("You Won, Score: " + score, 190, 300);
 			
 			g.setFont(new Font("serif", Font.BOLD, 20));
-			g.drawString("Press Enter to Restart.", 230, 350);			
+			g.drawString("Press Enter to Restart.", 230, 350);	
+			
 		}
 		
 		if(ballposY > 570) {
@@ -102,7 +104,7 @@ public class GamePlay extends JPanel implements KeyListener, ActionListener {
 		
 		timer.start();
 		if(play) {
-			// Ball - Pedal  interaction 
+			
 			if(new Rectangle(ballposX, ballposY, 20, 20).intersects(new Rectangle(playerX, 550, 100, 8))) {
 				ballYdir = - ballYdir;
 			}

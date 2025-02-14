@@ -24,7 +24,7 @@ public class MapGenerator {
 	
 	public void draw(Graphics2D g) {
 		for (int i = 0; i < map.length; i++) {
-			for (int j=0; j< map[0].length;j++) {
+			for (int j = 0; j < map[0].length; j++) {
 				if(map[i][j] > 0) {
 					g.setColor(Color.black);
 					g.fillRect(j*brickWidth + 80, i*brickHeight + 50, brickWidth, brickHeight);
